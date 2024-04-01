@@ -1,6 +1,9 @@
 @extends('templatefront')
 @section('main')
     <div class="container">
+        <div class="mb-4">
+            <a href="{{ url('kategori') }}">Click Kategori</a>
+        </div>
         @foreach ($data as $item)
             <div class="card mb-2">
                 <div class="card-body">

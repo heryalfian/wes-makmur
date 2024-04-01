@@ -19,17 +19,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 Route::get('/', function () {
-    return view('welcome');
+    return redirect('beranda');
 });
 
 Route::get('/template', function () {
     return view('template');
-});
-
-
-Route::get('/beranda', function () {
-    return redirect('beranda');
 });
 
 Route::middleware(['auth', 'status'])->group(function () {

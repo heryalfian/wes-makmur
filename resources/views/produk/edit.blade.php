@@ -39,6 +39,11 @@
 
             </select>
         </div>
+        {{-- @if ($data->foto)
+            <div class="mb-2">
+                <img src="{{ asset('storage/' . $data->foto) }}" alt="" width="60px" class="rounded-circle">
+            </div>
+        @endif --}}
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
 @endsection
