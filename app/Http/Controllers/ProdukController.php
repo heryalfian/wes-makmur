@@ -35,7 +35,8 @@ class ProdukController extends Controller
             'namaProduk' => 'required',
             'harga' => 'required',
             'descProduk' => 'required',
-            'kategori_id' => 'required'
+            'kategori_id' => 'required',
+            'foto' => 'required|max:2000|mimes:png,jpg,jpeg',
         ]);
 
         $validator['foto'] = $request->file('foto')->store('img');
@@ -72,7 +73,8 @@ class ProdukController extends Controller
             'namaProduk' => 'required',
             'harga' => 'required',
             'descProduk' => 'required',
-            'kategori_id' => 'required'
+            'kategori_id' => 'required',
+            'foto' => 'required|max:2000|mimes:png,jpg,jpeg',
         ]);
 
         try {

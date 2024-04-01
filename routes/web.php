@@ -27,7 +27,8 @@ Route::get('/template', function () {
     return view('template');
 });
 
-Route::get('/', function () {
+
+Route::get('/beranda', function () {
     return redirect('beranda');
 });
 

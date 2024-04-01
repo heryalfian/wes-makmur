@@ -11,8 +11,8 @@
         </div>
         <div class="form-group">
             <label>Deskripsi</label>
-            <input type="text" class="form-control @error('descKatrgori') is-invalid @enderror" name="descKatrgori"
-                value="{{ $data->descKatrgori }}">
+            <input type="text" class="form-control @error('descKategori') is-invalid @enderror" name="descKatrgori"
+                value="{{ $data->descKategori }}">
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>

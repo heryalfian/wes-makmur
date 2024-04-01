@@ -10,8 +10,8 @@
         </div>
         <div class="form-group">
             <label>Deskripsi</label>
-            <input type="text" class="form-control @error('descKatrgori') is-invalid @enderror" name="descKatrgori"
-                value="{{ old('descKatrgori') }}">
+            <input type="text" class="form-control @error('descKategori') is-invalid @enderror" name="descKategori"
+                value="{{ old('descKategori') }}">
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>

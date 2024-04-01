@@ -19,7 +19,7 @@
                 <tr>
                     <th scope="row">{{ $loop->iteration }}</th>
                     <td>{{ $item->namaProduk }}</td>
-                    <td><img src="{{ asset('storage/' . $item->foto) }}" alt="" width="150px"></td>
+                    <td><img src="{{ asset('storage/' . $item->foto) }}" alt="" width="100"></td>
                     <td>{{ $item->harga }}</td>
                     <td>{{ $item->descProduk }}</td>
                     <td>{{ $item->kategori->namaKategori }}</td>

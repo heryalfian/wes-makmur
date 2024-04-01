@@ -16,7 +16,7 @@
                 <tr>
                     <th scope="row">{{ $loop->iteration }}</th>
                     <td>{{ $item->namaKategori }}</td>
-                    <td>{{ $item->descKatrgori }}</td>
+                    <td>{{ $item->descKategori }}</td>
                     <td>
                         <a href="{{ route('kategori.edit', $item->id) }}" class="btn btn-warning">Edit</a>
                         <form action="{{ route('kategori.destroy', $item->id) }}" method="post">

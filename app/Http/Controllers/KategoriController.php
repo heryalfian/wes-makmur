@@ -30,8 +30,8 @@ class KategoriController extends Controller
     public function store(Request $request)
     {
         $validator = $request->validate([
-            'namaKategori' => 'required',
-            'descKategori' => 'required'
+            'namaKategori' => 'required | string',
+            'descKategori' => 'required | string',
         ]);
 
         Kategori::create($validator);
@@ -52,7 +52,6 @@ class KategoriController extends Controller
     public function edit(string $id)
     {
         $data = Kategori::find($id);
-
         return view('kategori/edit', compact('data'));
     }
 
