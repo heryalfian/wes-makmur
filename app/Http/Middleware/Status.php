@@ -16,9 +16,19 @@ class Status
      */
     public function handle(Request $request, Closure $next): Response
     {
-        if (Auth::user()->role == 'admin' || Auth::user()->role == 'editor' || Auth::user()->role == 'user') {
-            return $next($request);
+        // if (Auth::user()->role == 'admin' || Auth::user()->role == 'editor' || Auth::user()->role == 'user') {
+        //     return $next($request);
+        // }
+        if (Auth::check()) {
+            if (Auth::user()->role == 'admin') {
+                return $next($request);
+            } elseif (Auth::user()->role == 'editor') {
+                return $next($request);
+            } elseif (Auth::user()->role == 'user') {
+                return $next($request);
+            } else {
+                return redirect('login');
+            }
         }
-        return redirect('login');
     }
 }
