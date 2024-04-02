@@ -77,8 +77,10 @@ class ProdukController extends Controller
             'foto' => 'required|max:2000|mimes:png,jpg,jpeg',
         ]);
 
+        // dd($validator);
         try {
             $validator['foto'] = $request->file('foto')->store('img');
+            // dd($data->foto);
         } catch (\Throwable $th) {
             $validator['foto'] = $data->foto;
         }

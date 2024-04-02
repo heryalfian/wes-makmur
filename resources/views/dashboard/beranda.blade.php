@@ -2,7 +2,7 @@
 @section('main')
     <div class="container">
         <div class="mb-4">
-            <a href="{{ url('kategori') }}">Click Kategori</a>
+            <a href="{{ url('kategori') }}">To Dashboard</a>
         </div>
         @foreach ($data as $item)
             <div class="card mb-2">
