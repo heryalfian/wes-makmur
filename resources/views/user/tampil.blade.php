@@ -27,7 +27,7 @@
                                 </select>
                             </div>
                             <div class="form-group col-6">
-                                <button class="btn btn-primary ">Simpan</button>
+                                <button type="submit" class="btn btn-primary ">Simpan</button>
                             </div>
                         </form>
                     </td>

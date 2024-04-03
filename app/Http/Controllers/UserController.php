@@ -57,7 +57,7 @@ class UserController extends Controller
         $data->update([
             'role' => $request->role
         ]);
-
+        // dd($data);
         return redirect('user')->with('success', 'Hak akses berhasil diubah');
     }
 
