@@ -5,6 +5,7 @@ use App\Http\Controllers\KategoriController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\ProdukController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\KeuanganController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -35,6 +36,7 @@ Route::middleware(['auth', 'status'])->group(function () {
     Route::resource('post', PostController::class);
     Route::resource('produk', ProdukController::class);
     Route::resource('user', UserController::class);
+    Route::resource('keuangan', KeuanganController::class);
 });
 
 Route::get('beranda', [BerandaController::class, 'index']);

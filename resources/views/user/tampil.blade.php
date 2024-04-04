@@ -22,8 +22,8 @@
                             @method('put')
                             <div class="form-group col-6">
                                 <select class="form-control" name="role">
-                                    <option value="user" @selected($item->role == 'user')>User</option>
-                                    <option value="editor" @selected($item->role == 'editor')>Editor</option>
+                                    <option value="user" @selected($item->role == 'user')>user</option>
+                                    <option value="editor" @selected($item->role == 'editor')>editor</option>
                                 </select>
                             </div>
                             <div class="form-group col-6">

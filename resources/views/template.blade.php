@@ -78,6 +78,10 @@
                                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                                 User
                             </a>
+                            <a class="nav-link" href="{{ url('keuangan') }}">
+                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                                Keuangan
+                            </a>
                         @endif
 
                         @if (Auth::user()->role == 'editor')
