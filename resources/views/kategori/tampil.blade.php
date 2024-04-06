@@ -22,7 +22,7 @@
                         <form action="{{ route('kategori.destroy', $item->id) }}" method="post">
                             @csrf
                             @method('delete')
-                            <button class="btn btn-danger">Delete</button>
+                            <button class="btn btn-danger text-white">Delete</button>
                         </form>
                     </td>
                 </tr>

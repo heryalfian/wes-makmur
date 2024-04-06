@@ -63,23 +63,23 @@
 
                         @if (Auth::user()->role == 'admin')
                             <a class="nav-link" href="{{ url('kategori') }}">
-                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                                <div class="sb-nav-link-icon"><i class="fa-solid fa-layer-group"></i></div>
                                 Kategori
                             </a>
                             <a class="nav-link" href="{{ url('post') }}">
-                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                                <div class="sb-nav-link-icon"><i class="fa-solid fa-square-rss"></i></div>
                                 Post
                             </a>
                             <a class="nav-link" href="{{ url('produk') }}">
-                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                                <div class="sb-nav-link-icon"><i class="fa-solid fa-cheese"></i></div>
                                 Produk
                             </a>
                             <a class="nav-link" href="{{ url('user') }}">
-                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                                <div class="sb-nav-link-icon"><i class="fa-solid fa-user-shield"></i></div>
                                 User
                             </a>
                             <a class="nav-link" href="{{ url('keuangan') }}">
-                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                                <div class="sb-nav-link-icon"><i class="fa-solid fa-money-bill-transfer"></i></div>
                                 Keuangan
                             </a>
                         @endif

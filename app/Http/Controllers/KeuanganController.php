@@ -21,7 +21,8 @@ class KeuanganController extends Controller
      */
     public function create()
     {
-        //
+        $data = Keuangan::all();
+        return view('keuangan/tambah', compact('data'));
     }
 
     /**
@@ -29,7 +30,15 @@ class KeuanganController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validator = $request->validate([
+            'no_transaksi' => 'required | integer',
+            'tanggalDibuat' => 'required | date',
+            'namaProduk' => 'required | string',
+            'foto' => 'required | mimes:png,jpg,jpeg | max:2000',
+            'harga' => 'required | integer',
+            'keterangan' => 'required | string',
+        ]);
+        dd($validator);
     }
 
     /**
