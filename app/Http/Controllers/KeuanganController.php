@@ -31,7 +31,6 @@ class KeuanganController extends Controller
     public function store(Request $request)
     {
         $validator = $request->validate([
-            'no_transaksi' => 'required | integer',
             'tanggalDibuat' => 'required | date',
             'namaProduk' => 'required | string',
             'foto' => 'required | mimes:png,jpg,jpeg | max:2000',
@@ -39,6 +38,9 @@ class KeuanganController extends Controller
             'keterangan' => 'required | string',
         ]);
         dd($validator);
+        $validator['foto'] = $request->file('foto')->store('img');
+        Keuangan::create($validator);
+        return redirect('keuangan')->with('data berhasil ditambah');
     }
 
     /**
