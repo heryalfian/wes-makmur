@@ -19,7 +19,8 @@
                     <td>{{ $item->descKategori }}</td>
                     <td>
                         <a href="{{ route('kategori.edit', $item->id) }}" class="btn btn-warning">Edit</a>
-                        <form action="{{ route('kategori.destroy', $item->id) }}" method="post">
+                        <form action="{{ route('kategori.destroy', $item->id) }}" method="post" class="d-inline"
+                            onsubmit="return confirm('Yakin hapus data')">
                             @csrf
                             @method('delete')
                             <button class="btn btn-danger text-white">Delete</button>

@@ -23,7 +23,8 @@
                     <td>{{ $item->kategori->namaKategori }}</td>
                     <td>
                         <a href="{{ route('post.edit', $item->id) }}" class="btn btn-warning">Edit</a>
-                        <form action="{{ route('post.destroy', $item->id) }}" method="post">
+                        <form action="{{ route('post.destroy', $item->id) }}" method="post" class="d-inline"
+                            onsubmit="return confirm('Yakin hapus data')">
                             @csrf
                             @method('delete')
                             <button class="btn btn-danger">Delete</button>

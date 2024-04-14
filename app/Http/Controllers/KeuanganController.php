@@ -30,6 +30,7 @@ class KeuanganController extends Controller
      */
     public function store(Request $request)
     {
+        // dd($request->all());
         $validator = $request->validate([
             'tanggalDibuat' => 'required | date',
             'namaProduk' => 'required | string',
@@ -37,7 +38,7 @@ class KeuanganController extends Controller
             'harga' => 'required | integer',
             'keterangan' => 'required | string',
         ]);
-        dd($validator);
+        // dd($validator);
         $validator['foto'] = $request->file('foto')->store('img');
         Keuangan::create($validator);
         return redirect('keuangan')->with('data berhasil ditambah');
@@ -72,6 +73,8 @@ class KeuanganController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $data = Keuangan::find($id);
+        $data->delete();
+        return redirect('keuangan')->with('success', 'Data berhasil dihapus');
     }
 }
