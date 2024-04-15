@@ -22,12 +22,13 @@
                     <td>{{ $item->tanggalDibuat }}</td>
                     <td>{{ $item->kategori->namaKategori }}</td>
                     <td>
-                        <a href="{{ route('post.edit', $item->id) }}" class="btn btn-warning">Edit</a>
+                        <a href="{{ route('post.edit', $item->id) }}" class="btn btn-warning"><i
+                                class="fa-regular fa-pen-to-square"></i> </a>
                         <form action="{{ route('post.destroy', $item->id) }}" method="post" class="d-inline"
                             onsubmit="return confirm('Yakin hapus data')">
                             @csrf
                             @method('delete')
-                            <button class="btn btn-danger">Delete</button>
+                            <button class="btn btn-danger"><i class="fa-regular fa-trash-can"></i></button>
                         </form>
                     </td>
                 </tr>

@@ -24,12 +24,13 @@
                     <td>{{ $item->harga }}</td>
                     <td>{{ $item->keterangan }}</td>
                     <td>
-                        <a href="{{ route('keuangan.edit', $item->id) }}" class="btn btn-warning">Edit</a>
+                        <a href="{{ route('keuangan.edit', $item->id) }}" class="btn btn-warning"><i
+                                class="fa-regular fa-pen-to-square"></i></a>
                         <form action="{{ route('keuangan.destroy', $item->id) }}" method="post" class="d-inline"
                             onsubmit="return confirm('Yakin hapus data?')">
                             @csrf
                             @method('delete')
-                            <button class="btn btn-danger">Delete</button>
+                            <button class="btn btn-danger"><i class="fa-regular fa-trash-can"></i></button>
                         </form>
                     </td>
                 </tr>
